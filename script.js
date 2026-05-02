@@ -11,7 +11,6 @@ function showToast(message, type = "success") {
     }, 2200);
 }
 
-// Add Student
 function addStudent() {
     let id = document.getElementById("studentId").value;
     let name = document.getElementById("studentName").value;
@@ -44,7 +43,7 @@ function markAttendance() {
     showToast("Attendance marked successfully");
 }
 
-// Display Records
+
 function displayRecords() {
     let list = document.getElementById("records");
     list.innerHTML = "";
