@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Attendance Management System</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="container">
+    <header class="app-header">
+        <div>
+            <p class="eyebrow">Student dashboard</p>
+            <h1>Attendance Management System</h1>
+        </div>
+        <div class="header-badge">
+            <span class="badge-number">AMS</span>
+            <span>Live records</span>
+        </div>
+    </header>
+
+    <main class="dashboard-grid">
+        <section class="card">
+            <div class="card-heading">
+                <span class="icon-box">+</span>
+                <h2>Add Student</h2>
+            </div>
+            <label for="studentId">Student ID</label>
+            <input type="number" id="studentId" placeholder="Enter ID">
+            <label for="studentName">Student Name</label>
+            <input type="text" id="studentName" placeholder="Enter Name">
+            <button onclick="addStudent()">Add Student</button>
+        </section>
+
+        <section class="card">
+            <div class="card-heading">
+                <span class="icon-box">P</span>
+                <h2>Mark Attendance</h2>
+            </div>
+            <label for="attId">Student ID</label>
+            <input type="number" id="attId" placeholder="Enter ID">
+            <label for="status">Status</label>
+            <select id="status">
+                <option value="Present">Present</option>
+                <option value="Absent">Absent</option>
+            </select>
+            <button onclick="markAttendance()">Mark Attendance</button>
+        </section>
+
+        <section class="card records-card">
+            <div class="card-heading">
+                <span class="icon-box">R</span>
+                <h2>Records</h2>
+            </div>
+            <button class="secondary-button" onclick="displayRecords()">Show Records</button>
+            <ul id="records"></ul>
+        </section>
+    </main>
+</div>
+
+<div id="toast" role="status" aria-live="polite"></div>
+
+<script src="script.js"></script>
+</body>
+</html>
